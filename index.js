@@ -62,7 +62,7 @@ async function addToDB(req, res) {
     DOB: req.body.DOB,
     email: req.body.email,
     paymentInfo: req.body.paymentInfo,
-    creation_dt: Date.now(),
+    creation_dt: new Date().toISOString(),
   });
 
   try {
